@@ -5,7 +5,7 @@ Join our trading community and learn from experienced traders. Access structured
 - Clone this repo
 
 ```shell
-https://github.com/favouritesam/giddaa-application.git
+https://github.com/favouritesam/amejtrading-landing-page.git
 ```
 
 - Create a new branch with a name reflecting what you intend to work on
