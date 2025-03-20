@@ -46,7 +46,6 @@ export function Navbar() {
                     </Box>
                 </Flex>
 
-                {/* Mobile Navigation */}
                 <Box display={{ base: isOpen ? "block" : "none", md: "none" }} mt={4} pb={4}>
                     <Button
                         as={Link}

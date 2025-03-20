@@ -7,7 +7,7 @@ export function Footer() {
         <Box as="footer" bg="gray.900" color="white">
             <Container maxW="container.xl" py={16}>
                 <SimpleGrid columns={{ base: 1, md: 3 }} gap={10}>
-                    {/* Logo and Social Media */}
+
                     <Stack gap={6} align={{ base: "center", md: "flex-start" }}>
                         <Box position="relative" width="200px" height="80px">
                             <Image
@@ -39,7 +39,7 @@ export function Footer() {
                         </Flex>
                     </Stack>
 
-                    {/* Contact Information */}
+
                     <Stack gap={6} align={{ base: "center", md: "flex-start" }}>
                         <Heading as="h3" size="md">
                             Get In Touch
@@ -61,7 +61,7 @@ export function Footer() {
                         </Stack>
                     </Stack>
 
-                    {/* Newsletter */}
+
                     <Stack gap={6} align={{ base: "center", md: "flex-start" }}>
                         <Heading as="h3" size="md">
                             Subscribe to Our Newsletter

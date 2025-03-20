@@ -14,9 +14,11 @@ export default function CallToAction() {
                 h="100%"
                 bgImage="url('/img/cc.jpg')"
                 bgSize="cover"
-                bgPosition="center"
+                bgPosition="top"
                 bgRepeat="no-repeat"
+                objectFit="cover"
             />
+
             <Box
                 position="absolute"
                 top="0"
@@ -26,7 +28,6 @@ export default function CallToAction() {
                 bg="rgba(0, 0, 0, 0.5)"
             />
 
-            {/* Centered Content */}
             <Container
                 position="absolute"
                 top="50%"
