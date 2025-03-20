@@ -12,35 +12,33 @@ export function Navbar() {
         <Box as="nav" position="fixed" width="100%" zIndex="10" bg="white" boxShadow="sm">
             <Container maxW="container.xl" py={3}>
                 <Flex align="center" justify="space-between">
-                    {/* Logo */}
+
                     <Link href="/" passHref>
-                        <Box position="relative" width="180px" height="40px">
+                        <Box position="relative" width="220px" height="50px">
                             <Image
-                                src="/placeholder.svg?height=40&width=180"
+                                src="/img/amejtrading.jpg"
                                 alt="Amej Trading Logo"
                                 fill
-                                style={{ objectFit: "contain" }}
+                                style={{ objectFit: "contain", background: "white" }}
                                 priority
                             />
                         </Box>
                     </Link>
 
-                    {/* Mobile Menu Button */}
                     <Box display={{ base: "block", md: "none" }}>
                         <Button onClick={onToggle} variant="ghost" aria-label="Toggle Navigation">
                             {isOpen ? <CloseIcon /> : <HamburgerIcon />}
                         </Button>
                     </Box>
 
-                    {/* Desktop Navigation */}
                     <Box display={{ base: "none", md: "block" }}>
                         <Button
                             as={Link}
                             href="#consultations"
                             bg="red.600"
                             color="white"
-                            _hover={{ bg: "red.700" }}
-                            borderRadius="md"
+                            _hover={{ bg: "black", color:'white'}}
+                             borderRadius="100px"
                             fontWeight="bold"
                         >
                             Free Consultations
@@ -53,10 +51,10 @@ export function Navbar() {
                     <Button
                         as={Link}
                         href="#consultations"
-                        bg="red.600"
+                        bg="#a90100"
                         color="white"
-                        _hover={{ bg: "red.700" }}
-                        borderRadius="md"
+                        _hover={{ bg: "black", color:'white'}}
+                        borderRadius="100px"
                         fontWeight="bold"
                         w="full"
                     >

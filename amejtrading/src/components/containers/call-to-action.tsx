@@ -1,43 +1,72 @@
-import { Box, Container, Heading, Button, Stack } from "@chakra-ui/react"
+"use client"
 
-export function CallToAction() {
+import { Box, Container, Heading, Button, Image } from "@chakra-ui/react"
+
+export default function CallToAction() {
     return (
-        <Box
-            as="section"
-            position="relative"
-            py={20}
-            bg="gray.900"
-            color="white"
-            backgroundImage="url('/placeholder.svg?height=800&width=1600')"
-            backgroundSize="cover"
-            backgroundPosition="center"
-        >
-            <Box position="absolute" top={0} left={0} right={0} bottom={0} bg="rgba(0,0,0,0.7)" zIndex={1} />
+        <Box position="relative" w="100%" h="60vh">
 
-            <Container maxW="container.lg" position="relative" zIndex={2} textAlign="center">
-                <Stack gap={6} align="center">
-                    <Heading as="h2" fontSize={{ base: "3xl", md: "5xl" }} lineHeight={1.2}>
-                        Learn To Trade. Trade Smart.
-                        <br />
-                        Earn More.
+            <Image
+                position="absolute"
+                top="0"
+                left="0"
+                w="100%"
+                h="100%"
+                bgImage="url('/img/cc.jpg')"
+                bgSize="cover"
+                bgPosition="center"
+                bgRepeat="no-repeat"
+            />
+            <Box
+                position="absolute"
+                top="0"
+                left="0"
+                w="100%"
+                h="100%"
+                bg="rgba(0, 0, 0, 0.5)"
+            />
+
+            {/* Centered Content */}
+            <Container
+                position="absolute"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                textAlign="center"
+                maxW="container.lg"
+            >
+                <Box
+                    bg="rgba(94, 19, 19, 0.8)"
+                    borderRadius="lg"
+                    px={{ base: 6, md: 10 }}
+                    py={{ base: 6, md: 8 }}
+                    display="inline-block"
+                >
+                    <Heading
+                        as="h1"
+                        color="#ffffff"
+                        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+                        fontWeight="bold"
+                    >
+                        Learn To Trade. Trade Smart.<br /> Earn More.
                     </Heading>
 
                     <Button
-                        bg="red.600"
-                        color="white"
-                        size="lg"
-                        px={8}
-                        py={6}
-                        fontSize="md"
-                        fontWeight="bold"
-                        _hover={{ bg: "red.700" }}
+                        mt={4}
+                        bg="#a90100"
+                        color="#ffffff"
+                        fontSize="14px"
+                        fontWeight={400}
+                        px={6}
+                        py={3}
                         borderRadius="full"
+                        _hover={{ bg: "white",color:"#a90100" }}
                     >
                         Start For Free Today.
                     </Button>
-                </Stack>
+                </Box>
             </Container>
         </Box>
+
     )
 }
-

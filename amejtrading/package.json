@@ -11,6 +11,8 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/next-js": "^2.4.2",
+    "@chakra-ui/react": "2",
+    "@emotion/cache": "^11.14.0",
     "@heroicons/react": "^2.2.0",
     "@reduxjs/toolkit": "^2.6.1",
     "@tanstack/react-router": "^1.114.25",
@@ -27,7 +29,6 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^3.13.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@eslint/eslintrc": "^3",

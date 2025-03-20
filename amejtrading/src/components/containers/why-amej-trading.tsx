@@ -30,7 +30,7 @@ export function WhyAmejTrading() {
                     Why Amej Trading?
                 </Heading>
 
-                <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={8}>
+                <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8}>
                     <FeatureCard
                         icon={<Globe className="h-8 w-8 text-red-500" />}
                         title="Community"

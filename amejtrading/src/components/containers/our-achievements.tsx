@@ -1,5 +1,4 @@
-import { Box, Heading, Container, SimpleGrid, Text, Badge } from "@chakra-ui/react"
-import Image from "next/image"
+import { Box, Heading, Container, SimpleGrid, Text, Badge,Image } from "@chakra-ui/react"
 
 interface AchievementCardProps {
     image: string
@@ -12,14 +11,20 @@ const AchievementCard = ({ image, badge, title, description }: AchievementCardPr
     return (
         <Box borderRadius="lg" overflow="hidden" bg="white" boxShadow="md">
             <Box position="relative" height="200px">
-                <Image src={image || "/placeholder.svg"} alt={title} fill style={{ objectFit: "cover" }} />
+                <Image
+                    src={image || "/placeholder.svg"}
+                    alt={title}
+                    objectFit="cover"
+                    width="100%"
+                    height="100%"
+                />
                 <Badge
                     position="absolute"
-                    bottom={4}
-                    right={4}
+                    bottom="-16px"
+                    right="-2px"
                     bg="red.600"
                     color="white"
-                    px={3}
+                    px={5}
                     py={1}
                     borderRadius="md"
                     fontWeight="bold"
@@ -45,26 +50,28 @@ export function OurAchievements() {
                     Our Achievements
                 </Heading>
 
-                <SimpleGrid columns={{ base: 1, md: 3 }} gap={8}>
+                <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                     <AchievementCard
-                        image="/placeholder.svg?height=400&width=600"
+                        image="/img/oo.jpg"
                         badge="GIVE AWAY"
-                        title="Life-Changing Rewards"
-                        description="We don't just teach trading—we reward success! Our top-performing students have received incredible prizes, including cars and other life-changing gifts."
+                        title="Giveaway & Rewards"
+                        description="We don’t just teach trading—we reward success! Our top-performing students have received incredible prizes, including cars and other life-changing gifts.
+"
                     />
 
                     <AchievementCard
-                        image="/placeholder.svg?height=400&width=600"
+                        image="/img/one.jpg"
                         badge="SEMINAR"
-                        title="Impactful Seminar"
-                        description="With thousands of attendees nationwide, our expert-led webinars have helped traders master market trends, refine strategies, and achieve consistent profitability"
+                        title=" Seminars & Webinars"
+                        description="Thousands of traders have mastered market trends, refined strategies,
+                        and achieved consistent profitability through our expert-led events."
                     />
 
                     <AchievementCard
-                        image="/placeholder.svg?height=400&width=600"
+                        image="/img/tire.jpg"
                         badge="TRAINING"
                         title="Hands-On Training"
-                        description="Our in-depth training sessions provide practical skills, real-time market analysis, and expert mentorship, ensuring traders are fully equipped for success."
+                        description="Practical skills, real-time market analysis, and expert mentorship ensure traders are fully equipped for success."
                     />
                 </SimpleGrid>
             </Container>

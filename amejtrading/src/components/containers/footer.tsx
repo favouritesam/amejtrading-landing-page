@@ -11,7 +11,7 @@ export function Footer() {
                     <Stack gap={6} align={{ base: "center", md: "flex-start" }}>
                         <Box position="relative" width="200px" height="80px">
                             <Image
-                                src="/placeholder.svg?height=80&width=200"
+                                src="/img/amejtrading.jpg"
                                 alt="Amej Trading Logo"
                                 fill
                                 style={{ objectFit: "contain" }}
@@ -19,16 +19,21 @@ export function Footer() {
                         </Box>
 
                         <Flex gap={4}>
-                            <Link href="#" bg="red.600" p={2} borderRadius="full" display="flex" _hover={{ bg: "red.700" }}>
+                            <Link href="#"
+                                  bg="#a90100"
+                                  p={2}
+                                  borderRadius="full"
+                                  display="flex"
+                                  _hover={{ bg: "white", color:"#a90100" }}>
                                 <Facebook size={20} />
                             </Link>
-                            <Link href="#" bg="red.600" p={2} borderRadius="full" display="flex" _hover={{ bg: "red.700" }}>
+                            <Link href="#" bg="#a90100" p={2} borderRadius="full" display="flex" _hover={{ bg: "white", color:"#a90100" }}>
                                 <Instagram size={20} />
                             </Link>
-                            <Link href="#" bg="red.600" p={2} borderRadius="full" display="flex" _hover={{ bg: "red.700" }}>
+                            <Link href="#" bg="#a90100" p={2} borderRadius="full" display="flex" _hover={{ bg: "white", color:"#a90100" }}>
                                 <Twitter size={20} />
                             </Link>
-                            <Link href="#" bg="red.600" p={2} borderRadius="full" display="flex" _hover={{ bg: "red.700" }}>
+                            <Link href="#" bg="#a90100" p={2} borderRadius="full" display="flex" _hover={{ bg: "white", color:"#a90100" }}>
                                 <Youtube size={20} />
                             </Link>
                         </Flex>
@@ -59,20 +64,22 @@ export function Footer() {
                     {/* Newsletter */}
                     <Stack gap={6} align={{ base: "center", md: "flex-start" }}>
                         <Heading as="h3" size="md">
-                            Newsletter
+                            Subscribe to Our Newsletter
                         </Heading>
 
-                        <Text>Signup our newsletter to get update information, news, insight or promotions.</Text>
+                        <Text fontSize="14px" fontWeight={400}>
+                            Stay updated with exclusive insights,<br/> promotions, and industry news.
+                        </Text>
 
-                        <Stack gap={4} width="100%">
+                        <Stack gap={4} width="75%">
                             <Input
                                 placeholder="Email"
                                 bg="white"
                                 color="black"
-                                borderRadius="md"
+                                borderRadius="100px"
                                 _placeholder={{ color: "gray.500" }}
                             />
-                            <Button bg="red.600" color="white" _hover={{ bg: "red.700" }}>
+                            <Button bg="#a90100" color="white" _hover={{ bg: "white", color:"#a90100" }} borderRadius="100px">
                                 Sign Up
                             </Button>
                         </Stack>
@@ -80,9 +87,9 @@ export function Footer() {
                 </SimpleGrid>
             </Container>
 
-            <Box bg="red.600" py={4}>
+            <Box bg="#ff0000" py={4}>
                 <Container maxW="container.xl">
-                    <Text textAlign="center">Copyright © 2025 Amej Trading Limited, All rights reserved.</Text>
+                    <Text fontWeight={400} fontSize="14px">Copyright © 2025 Amej Trading Limited, All rights reserved.</Text>
                 </Container>
             </Box>
         </Box>
