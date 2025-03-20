@@ -139,22 +139,24 @@ export default function TestimonialSection() {
                     </HStack>
                 </Box>
 
-                <Box position="relative" w={{ base: "100%", lg: "50%" }} borderRadius="xl" overflow="hidden">
+                <Box position="relative"
+                     w={{ base: "100%", lg: "50%" }}
+                     borderRadius="xl"
+                     overflow="visible"
+                >
                     <Box position="relative" w="100%" h={{ base: "300px", md: "400px", lg: "100%" }}>
-                        <Image src="/img/men.jpg" alt="Event photo" objectFit="cover" w="100%" h="100%" />
+                        <Image src="/img/men.jpg" alt="Event photo" objectFit="cover" w="100%" h="100%" borderRadius="xl"/>
 
-                        {/* Updated Review Card */}
                         <Box position="absolute"
                              bottom="50px"
-                             right="0"
-                             zIndex={1}
+                             right="-40px"
+                             zIndex={2}
                              bg="white"
                              borderRadius="xl"
                              boxShadow="xl"
-                             maxW="200px"
-                             height='57%'
-                             overflow="hidden"
-                             transform="translateY(-50px)">
+                             w="200px"
+                             transform="translateY(-50px)"
+                        >
                             <VStack spacing={2} p={4}>
                                 <Text color="red.600" fontSize="3xl" fontWeight="bold">
                                     4.8+
