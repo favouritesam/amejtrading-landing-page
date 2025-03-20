@@ -1,7 +1,7 @@
 "use client"
 
 import {useEffect, useState } from "react"
-import { Box, Flex,Image, Text, Heading, Container, VStack, HStack, Button } from "@chakra-ui/react"
+import { Box, Flex,Image, Text, Heading, Container, VStack, HStack } from "@chakra-ui/react"
 import { StarIcon } from "@chakra-ui/icons"
 
 interface TestimonialProps {
@@ -27,7 +27,7 @@ const testimonials: TestimonialProps[] = [
         quote:
             "I joined a webinar out of curiosity, and it changed my life! I now understand the market better and make informed trades.",
         name: "Emeka K.",
-        image:"/img/boyblue.jpg",
+        image:"/img/guysuite.jpg",
     },
     {
         quote: "The mentorship program gave me direct access to experts who guided me every step of the way. Best decision ever!",

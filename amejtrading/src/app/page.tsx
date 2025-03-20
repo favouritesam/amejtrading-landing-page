@@ -1,4 +1,3 @@
-import {WhyAmejTrading} from "@/components/containers/why-amej-trading";
 import {OurAchievements} from "@/components/containers/our-achievements";
 import {Footer} from "@/components/containers/footer";
 import {Navbar} from "@/components/containers/navbar";
@@ -13,11 +12,9 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center">
             <Navbar/>
             <HeroSection/>
-            {/*<WhyAmejTrading/>*/}
             <FeaturesSection/>
             <OurAchievements/>
             <WhatWeAccomplished />
-            {/*<LearnToTrade/>*/}
             <CallToAction/>
             <Footer/>
         </main>

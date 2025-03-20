@@ -90,7 +90,7 @@ export function HeroSection() {
             position="relative"
             width="100%"
             height="100vh"
-            bgImage="url('/img/your-live-background.gif')" // Update with your live background
+            bgImage="url('/img/Video_HD_preview.mp4')" // Update with your live background
             bgSize="cover"
             bgPosition="center"
             display="flex"
@@ -103,7 +103,7 @@ export function HeroSection() {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                bg: "blackAlpha.700", // Dark overlay for readability
+                bg: "blackAlpha.700",
             }}
         >
             <Container maxW="container.lg" textAlign="center" position="relative" zIndex="1">
