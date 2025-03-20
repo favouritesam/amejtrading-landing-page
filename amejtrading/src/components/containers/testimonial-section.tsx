@@ -64,7 +64,7 @@ export default function TestimonialSection() {
                 <Text color="red.600" fontWeight="bold" fontSize="sm" textTransform="uppercase" mb={2}>
                     TESTIMONIAL
                 </Text>
-                <Heading as="h2" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} color="gray.800" fontWeight="bold" mb={4}>
+                <Heading as="h2" fontSize={{ base: "1xl", md: "2xl", lg: "3xl" }} color="gray.800"  fontWeight={500} mb={4}>
                     Client Feedback & Success Stories
                 </Heading>
                 <Box w={{ base: "100%", md: "90%", lg: "50%" }} h="1px" bg="gray.200" my={4} />
@@ -145,10 +145,10 @@ export default function TestimonialSection() {
                      overflow="visible"
                 >
                     <Box position="relative" w="100%" h={{ base: "300px", md: "400px", lg: "100%" }}>
-                        <Image src="/img/men.jpg" alt="Event photo" objectFit="cover" w="100%" h="100%" borderRadius="xl"/>
+                        <Image src="/img/men.jpg" alt="Event photo" objectFit="cover" w="100%" h="150%" borderRadius="xl" mt='-25%'/>
 
                         <Box position="absolute"
-                             bottom="50px"
+                             bottom="-16"
                              right="-40px"
                              zIndex={2}
                              bg="white"
