@@ -1,10 +1,10 @@
 "use client";
 
 import type React from "react";
-import { useState } from "react";
-import { Box, Container, Heading, SimpleGrid, Text, VStack, Icon } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { Globe, GraduationCap, Handshake, BarChart3 } from "lucide-react";
+import {useState} from "react";
+import {Box, Container, Heading, SimpleGrid, Text, VStack, Icon} from "@chakra-ui/react";
+import {motion} from "framer-motion";
+import {Globe, GraduationCap, Handshake, BarChart3} from "lucide-react";
 
 interface FeatureCardProps {
     title: string;
@@ -13,10 +13,9 @@ interface FeatureCardProps {
     isHighlighted?: boolean;
 }
 
-// Motion wrapper for animation effects
 const MotionBox = motion(Box);
 
-const FeatureCard = ({ title, description, icon, isHighlighted = false }: FeatureCardProps) => {
+const FeatureCard = ({title, description, icon, isHighlighted = false}: FeatureCardProps) => {
     const [isClicked, setIsClicked] = useState(false);
 
     return (
@@ -31,20 +30,20 @@ const FeatureCard = ({ title, description, icon, isHighlighted = false }: Featur
             onClick={() => setIsClicked(!isClicked)}
             whileHover={{
                 y: -5,
-                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.15)", // Add soft shadow on hover
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.15)",
             }}
             whileTap={{
                 y: -8,
-                boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.25)", // Deeper shadow on click
+                boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.25)",
             }}
-            animate={isClicked ? { y: -8, boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.25)" } : {}}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, ease: "easeOut" }} // Smooth motion
+            animate={isClicked ? {y: -8, boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.25)"} : {}}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            viewport={{once: true}}
+            transition={{duration: 0.3, ease: "easeOut"}}
         >
             <VStack spacing={4} align="flex-start">
-                <Icon as={icon} color={isHighlighted ? "white" : "red.600"} boxSize={8} />
+                <Icon as={icon} color={isHighlighted ? "white" : "red.600"} boxSize={8}/>
                 <Heading as="h3" fontSize="xl" fontWeight="bold" mb={2}>
                     {title}
                 </Heading>
@@ -58,26 +57,26 @@ const FeatureCard = ({ title, description, icon, isHighlighted = false }: Featur
 
 export default function FeaturesSection() {
     return (
-        <Box py={{ base: 12, md: 20 }} bg="gray.50">
+        <Box py={{base: 12, md: 20}} bg="gray.50">
             <Container maxW="container.xl">
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    initial={{opacity: 0, y: -20}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8, ease: "easeOut"}}
                 >
                     <Heading
                         as="h2"
-                        fontSize={{ base: "3xl", md: "4xl" }}
+                        fontSize={{base: "3xl", md: "4xl"}}
                         fontWeight="bold"
                         textAlign="center"
-                        mb={{ base: 10, md: 16 }}
+                        mb={{base: 10, md: 16}}
                     >
                         Why Amej Trading?
                     </Heading>
                 </motion.div>
 
-                <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
+                <SimpleGrid columns={{base: 1, md: 2, lg: 4}} spacing={6}>
                     <FeatureCard
                         title="Community"
                         icon={Globe}
