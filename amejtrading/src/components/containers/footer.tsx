@@ -112,7 +112,7 @@ export function Footer() {
                             <Flex align="center" gap={2}>
                                 <MessageCircle size={18} />
                                 <Link href="https://wa.me/2349050463932" target="_blank">
-                                    📍 Online Support
+                                    📍 Online Class
                                 </Link>
                             </Flex>
                         </Stack>
@@ -129,17 +129,27 @@ export function Footer() {
                         </Text>
 
                         <Stack gap={4} width="100%">
-                            <Input
-                                placeholder="Enter your email"
-                                bg="white"
-                                color="black"
-                                borderRadius="100px"
-                                _placeholder={{ color: "gray.500" }}
-                            />
-                            <Button bg="#a90100" color="white" _hover={{ bg: "white", color:"#a90100" }} borderRadius="100px">
-                                Sign Up
-                            </Button>
-                        </Stack>
+    <Input
+        placeholder="Enter your email"
+        bg="white"
+        color="black"
+        borderRadius="100px"
+        _placeholder={{ color: "gray.500" }}
+    />
+    <a href="https://wa.me/2349050463932" target="_blank" rel="noopener noreferrer" style={{ width: "100%" }}>
+        <Button 
+            bg="#a90100" 
+            color="white" 
+            _hover={{ bg: "white", color: "#a90100" }} 
+            borderRadius="100px"
+            width="100%"
+        >
+            Register
+        </Button>
+    </a>
+</Stack>
+
+
                     </Stack>
 
                 </SimpleGrid>

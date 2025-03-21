@@ -34,14 +34,14 @@ export function Navbar() {
                     <Box display={{ base: "none", md: "block" }}>
                         <Button
                             as={Link}
-                            href="#consultations"
+                            href="https://wa.me/2349050463932"
                             bg="red.600"
                             color="white"
                             _hover={{ bg: "black", color:'white'}}
                              borderRadius="100px"
                             fontWeight="bold"
                         >
-                            Free Consultations
+                            Register
                         </Button>
                     </Box>
                 </Flex>
@@ -49,7 +49,7 @@ export function Navbar() {
                 <Box display={{ base: isOpen ? "block" : "none", md: "none" }} mt={4} pb={4}>
                     <Button
                         as={Link}
-                        href="#consultations"
+                        href="https://wa.me/2349050463932"
                         bg="#a90100"
                         color="white"
                         _hover={{ bg: "black", color:'white'}}
@@ -57,7 +57,7 @@ export function Navbar() {
                         fontWeight="bold"
                         w="full"
                     >
-                        Free Consultations
+                        Register
                     </Button>
                 </Box>
             </Container>

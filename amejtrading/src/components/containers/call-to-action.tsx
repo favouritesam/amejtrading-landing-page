@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Heading, Button, Image } from "@chakra-ui/react";
+import { Box, Container, Heading, Button, Image, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 export default function CallToAction() {
@@ -59,11 +59,12 @@ export default function CallToAction() {
                     transition={{ duration: 1, delay: 0.8 }}
                 >
                     <Box
-                        bg="rgba(94, 19, 19, 0.6)" // Lower opacity for dimming effect
+                        bg="rgba(94, 19, 19, 0.8)" // Adjust opacity for better readability
                         borderRadius="lg"
                         px={{ base: 6, md: 10 }}
                         py={{ base: 6, md: 8 }}
                         display="inline-block"
+                        color="white"
                     >
                         {/* Heading - Slides in from the left */}
                         <motion.div
@@ -73,15 +74,29 @@ export default function CallToAction() {
                         >
                             <Heading
                                 as="h1"
-                                color="#ffffff"
                                 fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
                                 fontWeight="bold"
                             >
-                                Learn To Trade. Trade Smart.<br /> Earn More.
+                                What you get when<br /> you Enroll.
                             </Heading>
                         </motion.div>
 
-                        {/* CTA Button - Subtle Pulse Animation */}
+                        {/* What You Get Section */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 1.2 }}
+                        >
+                            <VStack spacing={3} mt={4} align="center">
+                                <Text>✔️ 14 Days of Intensive Training</Text>
+                                <Text>✔️ Personalized Mentorship from Experts</Text>
+                                <Text>✔️ Access to Premium Trading Signals</Text>
+                                <Text>✔️ Certificate of Completion</Text>
+                                <Text>✔️ Ongoing Support & Community Access</Text>
+                            </VStack>
+                        </motion.div>
+
+                        {/* WhatsApp Link Button */}
                         <motion.div
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -89,17 +104,19 @@ export default function CallToAction() {
                             whileHover={{ scale: 1.1 }}
                         >
                             <Button
-                                mt={4}
-                                bg="#a90100"
-                                color="#ffffff"
+                                as="a"
+                                href="https://wa.me/2349050463932"
+                                mt={5}
+                                bg="red.500"
+                                color="white"
                                 fontSize="14px"
                                 fontWeight={400}
                                 px={6}
                                 py={3}
                                 borderRadius="full"
-                                _hover={{ bg: "white", color: "#a90100" }}
+                                _hover={{ bg: "green.400" }}
                             >
-                                Start For Free Today.
+                                Secure Your Spot Now
                             </Button>
                         </motion.div>
                     </Box>
