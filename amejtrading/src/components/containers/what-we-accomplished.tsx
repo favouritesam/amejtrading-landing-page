@@ -62,7 +62,7 @@ export function WhatWeAccomplished() {
     }, [isHovering, currentSlide]);
 
     return (
-        <Box as="section" py={16} px="10%" bg="gray.50">
+        <Box as="section" py={16} bg="gray.50">
             <Container maxW="container.xl">
                 <Heading as="h2" fontSize={{base: "2xl", md: "3xl"}} mb={6}>
                     What We Accomplished.
