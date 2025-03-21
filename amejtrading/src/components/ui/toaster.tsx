@@ -1,9 +1,9 @@
 "use client"
 
-import { Portal,  Stack, useToast, Button } from "@chakra-ui/react"
+import { Portal, Stack, useToast, Button } from "@chakra-ui/react"
 
-export const Toaster = () => {
-  const toast = useToast() // Use Chakra's useToast hook
+export default function ToastExample() {
+  const toast = useToast() // Chakra UI's toast hook
 
   return (
     <Portal>
