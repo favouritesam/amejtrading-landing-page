@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CallToAction() {
     return (
-        <Box position="relative" w="100%" h="60vh" overflow="hidden">
+        <Box position="relative" w="100%" h="70vh" overflow="hidden">
             {/* Background Image - Fades in smoothly */}
             <motion.div
                 initial={{ opacity: 0 }}
@@ -22,8 +22,9 @@ export default function CallToAction() {
                 <Image
                     src="/img/cc.jpg"
                     w="100%"
-                    h="100%"
+                    minH="100%" // Ensures full height coverage
                     objectFit="cover"
+                    objectPosition="top center" // Ensures head is not cut off
                 />
             </motion.div>
 
@@ -58,7 +59,7 @@ export default function CallToAction() {
                     transition={{ duration: 1, delay: 0.8 }}
                 >
                     <Box
-                        bg="rgba(94, 19, 19, 0.8)"
+                        bg="rgba(94, 19, 19, 0.6)" // Lower opacity for dimming effect
                         borderRadius="lg"
                         px={{ base: 6, md: 10 }}
                         py={{ base: 6, md: 8 }}

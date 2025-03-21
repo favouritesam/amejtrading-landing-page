@@ -1,5 +1,6 @@
 "use client"
 
+import { useRef } from "react"
 import {
     Modal,
     ModalOverlay,
@@ -11,7 +12,7 @@ import {
     Button,
     Box,
 } from "@chakra-ui/react"
-import { useRef } from "react"
+import { motion, Variants } from "framer-motion"
 
 interface VideoModalProps {
     isOpen: boolean
@@ -20,13 +21,41 @@ interface VideoModalProps {
     title: string
 }
 
+// Motion wrapper for animation
+const MotionModalContent = motion(ModalContent)
+const MotionOverlay = motion(ModalOverlay)
+
+// Define animations
+const modalVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+    exit: { opacity: 0, y: 50, transition: { duration: 0.3, ease: "easeIn" } }
+}
+
 export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps) {
     const finalRef = useRef(null)
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered finalFocusRef={finalRef}>
-            <ModalOverlay />
-            <ModalContent>
+            {/* Animated overlay */}
+            <MotionOverlay
+                initial="hidden"
+                animate={isOpen ? "visible" : "hidden"}
+                exit="exit"
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1, transition: { duration: 0.3 } },
+                    exit: { opacity: 0, transition: { duration: 0.2 } }
+                }}
+            />
+            
+            {/* Animated modal content */}
+            <MotionModalContent
+                initial="hidden"
+                animate={isOpen ? "visible" : "hidden"}
+                exit="exit"
+                variants={modalVariants}
+            >
                 <ModalHeader>{title}</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
@@ -46,8 +75,7 @@ export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps)
                         Close
                     </Button>
                 </ModalFooter>
-            </ModalContent>
+            </MotionModalContent>
         </Modal>
     )
 }
-

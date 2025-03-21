@@ -1,8 +1,9 @@
 "use client";
 
 import type React from "react";
+import { useState } from "react";
 import { Box, Container, Heading, SimpleGrid, Text, VStack, Icon } from "@chakra-ui/react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 import { Globe, GraduationCap, Handshake, BarChart3 } from "lucide-react";
 
 interface FeatureCardProps {
@@ -16,23 +17,31 @@ interface FeatureCardProps {
 const MotionBox = motion(Box);
 
 const FeatureCard = ({ title, description, icon, isHighlighted = false }: FeatureCardProps) => {
+    const [isClicked, setIsClicked] = useState(false);
+
     return (
         <MotionBox
             bg={isHighlighted ? "red.600" : "white"}
             color={isHighlighted ? "white" : "gray.800"}
             borderRadius="xl"
             p={8}
-            boxShadow="sm"
             height="100%"
-            transition="transform 0.3s, box-shadow 0.3s"
-            _hover={{
-                transform: "translateY(-5px)",
-                boxShadow: "lg",
+            cursor="pointer"
+            boxShadow="md" // Default shadow
+            onClick={() => setIsClicked(!isClicked)}
+            whileHover={{
+                y: -5,
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.15)", // Add soft shadow on hover
             }}
+            whileTap={{
+                y: -8,
+                boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.25)", // Deeper shadow on click
+            }}
+            animate={isClicked ? { y: -8, boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.25)" } : {}}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} // Ensures animation only runs once per scroll
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, ease: "easeOut" }} // Smooth motion
         >
             <VStack spacing={4} align="flex-start">
                 <Icon as={icon} color={isHighlighted ? "white" : "red.600"} boxSize={8} />
