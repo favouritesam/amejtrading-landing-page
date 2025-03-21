@@ -24,7 +24,7 @@ const FeatureCard = ({ title, description, icon, isHighlighted = false }: Featur
             p={8}
             boxShadow="sm"
             height="100%"
-            transition="transform 0.3s, box-shadow 0.3s"
+            // transition="transform 0.3s, box-shadow 0.3s"
             _hover={{
                 transform: "translateY(-5px)",
                 boxShadow: "lg",
@@ -51,7 +51,6 @@ export default function FeaturesSection() {
     return (
         <Box py={{ base: 12, md: 20 }} bg="gray.50">
             <Container maxW="container.xl">
-                {/* Heading with Fade-In Animation */}
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +68,6 @@ export default function FeaturesSection() {
                     </Heading>
                 </motion.div>
 
-                {/* Grid of Feature Cards with Staggered Animations */}
                 <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
                     <FeatureCard
                         title="Community"

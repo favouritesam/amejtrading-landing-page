@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export function HeroSection() {
     return (
         <Box position="relative" width="100%" height="100vh" overflow="hidden">
-            {/* Background Video */}
             <video 
                 autoPlay 
                 loop 
@@ -21,10 +20,9 @@ export function HeroSection() {
                     zIndex: -1
                 }}
             >
-                <source src="/liveVideo.mp4" type="video/mp4" />
+                <source src="/Video_HD_Preview.mp4" type="video/mp4" />
             </video>
 
-            {/* Overlay */}
             <Box 
                 position="absolute"
                 top={0}
@@ -35,7 +33,6 @@ export function HeroSection() {
                 zIndex={0}
             />
 
-            {/* Centered Content */}
             <Flex
                 position="relative"
                 zIndex={1}
