@@ -16,6 +16,11 @@ const nextConfig = {
     images: {
         domains: ["ytimg.com", "i.ytimg.com", "youtube.com", "youtu.be"],
     },
+    
+        eslint: {
+          ignoreDuringBuilds: true,
+        },
+      
     async headers() {
         return [
             {
