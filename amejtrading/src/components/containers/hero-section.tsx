@@ -1,4 +1,4 @@
-import { Box, Container, Button, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Button, Text } from "@chakra-ui/react";
 
 export function HeroSection() {
     return (
@@ -6,7 +6,7 @@ export function HeroSection() {
             position="relative"
             width="100%"
             height="100vh"
-            bgImage="url('/img/Video_HD_preview.mp4')" // Update with your live background
+            bgImage="url('/public/liveVideo.mp4')" // Update with your live background
             bgSize="cover"
             bgPosition="center"
             display="flex"
