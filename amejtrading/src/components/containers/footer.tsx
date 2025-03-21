@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function Footer() {
     return (
-        <Box as="footer" bg="gray.900" color="white">
+        <Box as="footer" bg="#161616" color="white">
             <Container maxW="container.xl" py={16}>
                 <SimpleGrid columns={{ base: 1, md: 3 }} gap={10}>
 
