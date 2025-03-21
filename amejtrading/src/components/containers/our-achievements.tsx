@@ -25,7 +25,7 @@ const AchievementCard = ({ image, badge, title, description }: AchievementCardPr
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            whileHover={{ scale: 1.05, boxShadow: "xl" }} // Hover effect
+            whileHover={{ scale: 1.05, boxShadow: "xl" }}
         >
             <Box position="relative" height="200px">
                 <MotionImage
@@ -67,7 +67,7 @@ export function OurAchievements() {
     return (
         <Box as="section" py={16} bg="white">
             <Container maxW="container.xl">
-                {/* Animated Heading */}
+
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}

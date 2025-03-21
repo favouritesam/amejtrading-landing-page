@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, Container, Button, Text, Flex,  HStack, Icon, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Button, Text, Flex, HStack, Icon, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaClock } from "react-icons/fa";
 
@@ -22,14 +22,12 @@ export function HeroSection() {
     const [targetDate, setTargetDate] = useState<Date | null>(null);
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-    // ✅ Set the target date only on client-side
     useEffect(() => {
         const date = new Date();
         date.setDate(date.getDate() + 7); // 7-day countdown
         setTargetDate(date);
     }, []);
 
-    // ✅ Start countdown only when targetDate is set
     useEffect(() => {
         if (!targetDate) return;
 
@@ -40,17 +38,12 @@ export function HeroSection() {
         return () => clearInterval(timer);
     }, [targetDate]);
 
-    // ✅ Prevent hydration errors by rendering only after targetDate is set
     if (!targetDate) return null;
 
     return (
         <Box position="relative" width="100%" height="100vh" overflow="hidden">
             {/* Background Video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
+            <video autoPlay loop muted playsInline
                 style={{
                     position: "absolute",
                     top: 0,
@@ -59,9 +52,8 @@ export function HeroSection() {
                     height: "100%",
                     objectFit: "cover",
                     zIndex: -1,
-                }}
-            >
-                <source src="/liveVideo.mp4" type="video/mp4" />
+                }}>
+                <source src="/Video_HD_Preview.mp4" type="video/mp4" />
             </video>
 
             {/* Dark Overlay */}
@@ -88,7 +80,7 @@ export function HeroSection() {
                         </Text>
                     </motion.div>
 
-                    {/* Key Benefits (Two Columns, Three Rows) */}
+                    {/* Key Benefits */}
                     <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.9 }}>
                         <SimpleGrid columns={{ base: 1, md: 2 }} spacingX={6} spacingY={3} mt={6}>
                             <HStack>
@@ -136,25 +128,15 @@ export function HeroSection() {
 
                     {/* Pricing & CTA */}
                     <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 1.3 }}>
-                        <Text fontSize="md" color="gray.300" mt={3}>
-                            🔹 <Text as="span" fontWeight="bold" color="red.400">
-                                Enrollment Fee: N100,000
-                            </Text>{" "}
-                            (Valued at N400,000 – Limited Time Discount!)
-                        </Text>
+                    <Text fontSize="md" color="gray.300" mt={3}>
+    🔹 <Text as="span" fontWeight="bold" color="red.400">
+        Enrollment Fee: ₦100,000
+    </Text>{" "}
+    (<Text as="s" color="gray.500">₦400,000</Text> – Limited Time Discount!)
+</Text>
 
-                        <Button
-                            mt={6}
-                            bg="red.600"
-                            color="white"
-                            size="lg"
-                            _hover={{ bg: "black", transform: "scale(1.05)" }}
-                            borderRadius="full"
-                            transition="0.3s"
-                            as="a"
-                            href="https://wa.me/2349050463932"
-                            target="_blank"
-                        >
+
+                        <Button mt={6} bg="red.600" color="white" size="lg" _hover={{ bg: "black", transform: "scale(1.05)" }} borderRadius="full" transition="0.3s" as="a" href="https://wa.me/2349050463932" target="_blank">
                             Join The Training Now
                         </Button>
                     </motion.div>
