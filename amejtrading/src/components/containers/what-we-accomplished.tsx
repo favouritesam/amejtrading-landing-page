@@ -13,7 +13,6 @@ import {
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { VideoModal } from "@/components/containers/video-modal";
 import TestimonialSection from "@/components/containers/testimonial-section";
 
 const achievements = [

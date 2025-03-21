@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, Container, Button, Text, Flex, VStack, HStack, Icon, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Button, Text, Flex,  HStack, Icon, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaClock } from "react-icons/fa";
 
