@@ -59,7 +59,7 @@ export default function TestimonialSection() {
     }, []);
 
     return (
-        <Container maxW="container.xl" py={{ base: 10, md: 16 }}>
+        <Container maxW="container.xl" py={{ base: 10, md: 16 }} mt='8%'>
             <Box mb={8}>
                 <Text color="red.600" fontWeight="bold" fontSize="sm" textTransform="uppercase" mb={2}>
                     TESTIMONIAL
