@@ -1,22 +1,43 @@
-import { Box, Heading, Container, SimpleGrid, Text, Badge,Image } from "@chakra-ui/react"
+"use client";
+
+import { Box, Heading, Container, SimpleGrid, Text, Badge, Image } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
+// Motion wrapper for animations
+const MotionBox = motion(Box);
+const MotionImage = motion(Image);
 
 interface AchievementCardProps {
-    image: string
-    badge: string
-    title: string
-    description: string
+    image: string;
+    badge: string;
+    title: string;
+    description: string;
 }
 
 const AchievementCard = ({ image, badge, title, description }: AchievementCardProps) => {
     return (
-        <Box borderRadius="lg" overflow="hidden" bg="white" boxShadow="md">
+        <MotionBox
+            borderRadius="lg"
+            overflow="hidden"
+            bg="white"
+            boxShadow="md"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ scale: 1.05, boxShadow: "xl" }} // Hover effect
+        >
             <Box position="relative" height="200px">
-                <Image
+                <MotionImage
                     src={image || "/placeholder.svg"}
                     alt={title}
                     objectFit="cover"
                     width="100%"
                     height="100%"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                 />
                 <Badge
                     position="absolute"
@@ -38,25 +59,32 @@ const AchievementCard = ({ image, badge, title, description }: AchievementCardPr
                 </Heading>
                 <Text color="gray.600">{description}</Text>
             </Box>
-        </Box>
-    )
-}
+        </MotionBox>
+    );
+};
 
 export function OurAchievements() {
     return (
         <Box as="section" py={16} bg="white">
             <Container maxW="container.xl">
-                <Heading as="h2" fontSize={{ base: "3xl", md: "4xl" }} mb={12}>
-                    Our Achievements
-                </Heading>
+                {/* Animated Heading */}
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <Heading as="h2" fontSize={{ base: "3xl", md: "4xl" }} mb={12} textAlign="center">
+                        Our Achievements
+                    </Heading>
+                </motion.div>
 
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                     <AchievementCard
                         image="/img/oo.jpg"
                         badge="GIVE AWAY"
                         title="Giveaway & Rewards"
-                        description="We don’t just teach trading—we reward success! Our top-performing students have received incredible prizes, including cars and other life-changing gifts.
-"
+                        description="We don’t just teach trading—we reward success! Our top-performing students have received incredible prizes, including cars and other life-changing gifts."
                     />
 
                     <AchievementCard
@@ -76,6 +104,5 @@ export function OurAchievements() {
                 </SimpleGrid>
             </Container>
         </Box>
-    )
+    );
 }
-

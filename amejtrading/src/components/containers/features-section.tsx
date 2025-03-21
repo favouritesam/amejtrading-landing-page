@@ -1,18 +1,23 @@
-"use client"
-import type React from "react"
-import { Box, Container, Heading, SimpleGrid, Text, VStack, Icon } from "@chakra-ui/react"
-import { Globe, GraduationCap, Handshake, BarChart3 } from "lucide-react"
+"use client";
+
+import type React from "react";
+import { Box, Container, Heading, SimpleGrid, Text, VStack, Icon } from "@chakra-ui/react";
+import { motion } from "framer-motion"; // Import Framer Motion
+import { Globe, GraduationCap, Handshake, BarChart3 } from "lucide-react";
 
 interface FeatureCardProps {
-    title: string
-    description: string
-    icon: React.ElementType
-    isHighlighted?: boolean
+    title: string;
+    description: string;
+    icon: React.ElementType;
+    isHighlighted?: boolean;
 }
+
+// Motion wrapper for animation effects
+const MotionBox = motion(Box);
 
 const FeatureCard = ({ title, description, icon, isHighlighted = false }: FeatureCardProps) => {
     return (
-        <Box
+        <MotionBox
             bg={isHighlighted ? "red.600" : "white"}
             color={isHighlighted ? "white" : "gray.800"}
             borderRadius="xl"
@@ -24,6 +29,10 @@ const FeatureCard = ({ title, description, icon, isHighlighted = false }: Featur
                 transform: "translateY(-5px)",
                 boxShadow: "lg",
             }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} // Ensures animation only runs once per scroll
+            transition={{ duration: 0.8, ease: "easeOut" }}
         >
             <VStack spacing={4} align="flex-start">
                 <Icon as={icon} color={isHighlighted ? "white" : "red.600"} boxSize={8} />
@@ -34,24 +43,33 @@ const FeatureCard = ({ title, description, icon, isHighlighted = false }: Featur
                     {description}
                 </Text>
             </VStack>
-        </Box>
-    )
-}
+        </MotionBox>
+    );
+};
 
 export default function FeaturesSection() {
     return (
         <Box py={{ base: 12, md: 20 }} bg="gray.50">
             <Container maxW="container.xl">
-                <Heading
-                    as="h2"
-                    fontSize={{ base: "3xl", md: "4xl" }}
-                    fontWeight="bold"
-                    textAlign="center"
-                    mb={{ base: 10, md: 16 }}
+                {/* Heading with Fade-In Animation */}
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    Why Amej Trading?
-                </Heading>
+                    <Heading
+                        as="h2"
+                        fontSize={{ base: "3xl", md: "4xl" }}
+                        fontWeight="bold"
+                        textAlign="center"
+                        mb={{ base: 10, md: 16 }}
+                    >
+                        Why Amej Trading?
+                    </Heading>
+                </motion.div>
 
+                {/* Grid of Feature Cards with Staggered Animations */}
                 <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
                     <FeatureCard
                         title="Community"
@@ -80,6 +98,5 @@ export default function FeaturesSection() {
                 </SimpleGrid>
             </Container>
         </Box>
-    )
+    );
 }
-

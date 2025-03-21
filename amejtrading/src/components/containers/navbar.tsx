@@ -16,7 +16,7 @@ export function Navbar() {
                     <Link href="/" passHref>
                         <Box position="relative" width="220px" height="50px">
                             <Image
-                                src="/img/amejtrading.jpg"
+                                src="/img/amejtrading.png"
                                 alt="Amej Trading Logo"
                                 fill
                                 style={{ objectFit: "contain", background: "white" }}
