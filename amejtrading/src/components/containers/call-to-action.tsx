@@ -20,11 +20,13 @@ export default function CallToAction() {
             >
                 <Image
                     src="/img/cc.jpg"
+                    alt="Background image"
                     w="100%"
                     minH="100%"
                     objectFit="cover"
                     objectPosition="top center"
                 />
+
             </motion.div>
 
             <motion.div
