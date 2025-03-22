@@ -76,10 +76,10 @@ export function Footer() {
                         </Stack>
                     </Stack>
 
-                    {/* WhatsApp Support */}
+
                     <Stack gap={6} align={{base: "center", md: "flex-start"}}>
                         <Heading as="h3" size="md">
-                            WhatsApp Support
+                           Click to register
                         </Heading>
 
                         <Stack gap={3}>

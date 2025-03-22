@@ -8,6 +8,9 @@ import {FaCheckCircle, FaClock} from "react-icons/fa";
 const getTimeLeft = (targetDate: Date) => {
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
+    if (difference <= 0) {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 }; // Stop countdown at zero
+    }
 
     return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -21,23 +24,40 @@ export function HeroSection() {
     const [targetDate, setTargetDate] = useState<Date | null>(null);
     const [timeLeft, setTimeLeft] = useState({days: 0, hours: 0, minutes: 0, seconds: 0});
 
-    useEffect(() => {
-        const date = new Date();
-        date.setDate(date.getDate() + 7);
-        setTargetDate(date);
-    }, []);
+    // useEffect(() => {
+    //     const date = new Date();
+    //     date.setDate(date.getDate() + 7);
+    //     setTargetDate(date);
+    // }, []);
+    //
+    // useEffect(() => {
+    //     if (!targetDate) return;
+    //
+    //     const timer = setInterval(() => {
+    //         setTimeLeft(getTimeLeft(targetDate));
+    //     }, 1000);
+    //
+    //     return () => clearInterval(timer);
+    // }, [targetDate]);
+    //
+    // if (!targetDate) return null;
 
     useEffect(() => {
-        if (!targetDate) return;
+        const year = new Date().getFullYear();
+        const targetDate = new Date(year, 2, 25); // March 25 of this year
 
         const timer = setInterval(() => {
-            setTimeLeft(getTimeLeft(targetDate));
+            const timeRemaining = getTimeLeft(targetDate);
+            setTimeLeft(timeRemaining);
+
+            if (timeRemaining.days <= 0 && timeRemaining.hours <= 0 && timeRemaining.minutes <= 0 && timeRemaining.seconds <= 0) {
+                clearInterval(timer);
+            }
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [targetDate]);
+    }, []);
 
-    if (!targetDate) return null;
 
     return (
         <Box position="relative" width="100%" minHeight="100vh" overflow="hidden">
@@ -126,7 +146,7 @@ export function HeroSection() {
 
                         <Button mt={6} bg="red.600" color="white" size={{base: "sm", md: "lg"}}
                                 _hover={{bg: "black", transform: "scale(1.05)"}} borderRadius="full" transition="0.3s"
-                                as="a" href="https://wa.me/2349050463932" target="_blank"
+                                as="a" href="https://linktr.ee/Litefinanceclass?utm_source=linktree_profile_share&ltsid=89c16aec-bacc-4adb-81e6-4f1e36601f19" target="_blank"
                                 width={{base: "100%", sm: "auto"}}>
                             Join The Training Now
                         </Button>
