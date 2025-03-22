@@ -134,7 +134,7 @@ export function Footer() {
                                 borderRadius="100px"
                                 _placeholder={{color: "gray.500"}}
                             />
-                            <a href="https://wa.me/2349050463932" target="_blank" rel="noopener noreferrer"
+                            <a href="https://linktr.ee/Litefinanceclass?utm_source=linktree_profile_share&ltsid=89c16aec-bacc-4adb-81e6-4f1e36601f19" target="_blank" rel="noopener noreferrer"
                                style={{width: "100%"}}>
                                 <Button
                                     bg="#a90100"

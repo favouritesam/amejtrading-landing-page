@@ -380,7 +380,7 @@ export default function TestimonialSection() {
                             mt={{md: "20px"}}
                         >
                             <Link
-                                href="https://wa.me/2349050463932"
+                                href="https://linktr.ee/Litefinanceclass?utm_source=linktree_profile_share&ltsid=89c16aec-bacc-4adb-81e6-4f1e36601f19"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{textAlign: "center", fontWeight: "bold", fontSize: "14px"}}
