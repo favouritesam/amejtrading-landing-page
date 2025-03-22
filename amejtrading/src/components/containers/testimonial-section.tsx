@@ -233,6 +233,7 @@ interface TestimonialProps {
     image: string
 }
 
+
 const testimonials: TestimonialProps[] = [
     {
         quote: "I started with zero knowledge, but the academy’s step-by-step training made everything so easy. Highly recommended!",
