@@ -21,7 +21,7 @@ const getTimeLeft = (targetDate: Date) => {
 };
 
 export function HeroSection() {
-    const [targetDate, setTargetDate] = useState<Date | null>(null);
+    // const [targetDate, setTargetDate] = useState<Date | null>(null);
     const [timeLeft, setTimeLeft] = useState({days: 0, hours: 0, minutes: 0, seconds: 0});
 
     // useEffect(() => {
