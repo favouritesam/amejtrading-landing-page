@@ -76,8 +76,7 @@ export function HeroSection() {
                     <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.6 }}>
                         <Text fontSize={{ base: "3vw", sm: "sm", md: "md" }} color="gray.300" mt={3}>
-                            Gain hands-on experience, real-time market strategies, and risk management techniques from
-                            top industry experts.
+                            What You Get When You Enroll:
                         </Text>
                     </motion.div>
 
@@ -90,16 +89,22 @@ export function HeroSection() {
                             mt={6}
                         >
                             {[
-                                "🚀 Live Expert Sessions",
-                                "📊 Practical Trading Simulations",
-                                "📈 Proven Strategies for Success",
-                                "📅 Daily Market Analysis",
-                                "💰 Risk Management Techniques",
-                                "🌍 Trade with Confidence"
+                                "🚀 2weeks of Intensive Training",
+                                "📊 Personalized Mentorship from Experts",
+                                "📈 Access to Premium Trading Signals",
+                                "📅 Access to Real Trading capital T&C applies 'Not Prop Firm'",
+                                "💰 Certificate of Completion",
+                                "🌍 Ongoing Support & Community Access"
                             ].map((text, index) => (
                                 <HStack key={index} spacing={2}>
-                                    <Icon as={FaCheckCircle} color="green.400" boxSize={{ base: "4", sm: "5" }} />
-                                    <Text fontSize={{ base: "3vw", sm: "sm", md: "md" }} color="white">{text}</Text>
+                                    <Icon as={FaCheckCircle} color="green.400" boxSize={{ base: "4", sm: "5" }}/>
+                                    <Text
+                                        fontSize={{ base: "3vw", sm: "sm", md: "md" }}
+                                        color="white"
+                                        whiteSpace={{ base: "normal", md: "nowrap" }}
+                                    >
+                                        {text}
+                                    </Text>
                                 </HStack>
                             ))}
                         </SimpleGrid>

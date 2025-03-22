@@ -393,5 +393,5 @@ export default function TestimonialSection() {
                 </Box>
             </Flex>
         </Container>
-    )
+    );
 }

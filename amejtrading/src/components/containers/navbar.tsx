@@ -35,7 +35,7 @@ export function Navbar() {
                         <Button
                             as={Link}
                             href="https://linktr.ee/Litefinanceclass?utm_source=linktree_profile_share&ltsid=89c16aec-bacc-4adb-81e6-4f1e36601f19"
-                            bg="red.600"
+                            bg="#a90100"
                             color="white"
                             _hover={{bg: "black", color: 'white'}}
                             borderRadius="100px"
