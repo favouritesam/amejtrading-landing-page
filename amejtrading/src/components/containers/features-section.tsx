@@ -20,7 +20,7 @@ const FeatureCard = ({title, description, icon, isHighlighted = false}: FeatureC
 
     return (
         <MotionBox
-            bg={isHighlighted ? "red.600" : "white"}
+            bg={isHighlighted ? "#a90100" : "white"}
             color={isHighlighted ? "white" : "gray.800"}
             borderRadius="xl"
             p={8}

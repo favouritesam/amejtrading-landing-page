@@ -11,8 +11,8 @@ export function Footer() {
                     <Stack gap={6} align={{base: "center", md: "flex-start"}}>
                         <Box position="relative" width="200px" height="80px">
                             <Image
-                                src="/img/amejtrading.png"
-                                alt="Amej Trading Logo"
+                                src="/img/logoChange.png"
+                                alt="Amej trad Logo"
                                 fill
                                 style={{objectFit: "contain"}}
                             />
@@ -27,7 +27,7 @@ export function Footer() {
                                   _hover={{bg: "white", color: "#a90100"}}>
                                 <Facebook size={20}/>
                             </Link>
-                            <Link href="https://web.facebook.com/Amejtrading"
+                            <Link href="https://www.instagram.com/amejtrading"
                                   bg="#a90100"
                                   p={2}
                                   borderRadius="full"
@@ -35,7 +35,7 @@ export function Footer() {
                                   _hover={{bg: "white", color: "#a90100"}}>
                                 <Instagram size={20}/>
                             </Link>
-                            <Link href="https://web.facebook.com/Amejtrading"
+                            <Link href="https://x.com/Amejtrading"
                                   bg="#a90100"
                                   p={2}
                                   borderRadius="full"

@@ -280,7 +280,7 @@ export default function TestimonialSection() {
     return (
         <Container maxW="container.xl" py={{base: 10, md: 16}} mt="8%">
             <Box mb={8}>
-                <Text color="red.600" fontWeight="bold" fontSize="sm" textTransform="uppercase" mb={2}>
+                <Text color="#a90100" fontWeight="bold" fontSize="sm" textTransform="uppercase" mb={2}>
                     TESTIMONIAL
                 </Text>
                 <Heading as="h2" fontSize={{base: "1xl", md: "2xl", lg: "3xl"}} color="gray.800" fontWeight={500}
@@ -308,7 +308,7 @@ export default function TestimonialSection() {
                                     </Box>
                                     <Text textAlign="center"
                                           fontSize={{base: "sm", md: "md"}}>{testimonial.quote}</Text>
-                                    <Text color="red.600" fontWeight="medium"
+                                    <Text color="#a90100" fontWeight="medium"
                                           fontSize={{base: "sm", md: "md"}}>{testimonial.name}</Text>
                                 </VStack>
                             </motion.div>
@@ -348,7 +348,7 @@ export default function TestimonialSection() {
                         transform={{base: "translateX(50%)", md: "translateY(-50px)"}}
                     >
                         <VStack spacing={2} p={4}>
-                            <Text color="red.600" fontSize="3xl" fontWeight="bold">
+                            <Text color="#a90100" fontSize="3xl" fontWeight="bold">
                                 4.8+
                             </Text>
                             <Box>
@@ -359,7 +359,7 @@ export default function TestimonialSection() {
                             <Text fontSize="sm" fontWeight="medium">
                                 2,471 Reviews
                             </Text>
-                            <Box bg="#e60026" color="white" fontSize="xs" py={1} px={2} borderRadius="15px"
+                            <Box bg="#a90100" color="white" fontSize="xs" py={1} px={2} borderRadius="15px"
                                  textAlign="center">
                                 Excellent Score
                             </Box>

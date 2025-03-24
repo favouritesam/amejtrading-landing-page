@@ -136,7 +136,7 @@ export function HeroSection() {
                             (<Text as="s" color="gray.500">₦400,000</Text> – Limited Time Discount!)
                         </Text>
 
-                        <Button mt={6} bg="red.600" color="white" size={{ base: "sm", md: "lg" }}
+                        <Button mt={6} bg="#a90100" color="white" size={{ base: "sm", md: "lg" }}
                                 _hover={{ bg: "black", transform: "scale(1.05)" }} borderRadius="full" transition="0.3s"
                                 as="a" href="https://linktr.ee/Litefinanceclass?utm_source=linktree_profile_share&ltsid=89c16aec-bacc-4adb-81e6-4f1e36601f19" target="_blank"
                                 width={{ base: "100%", sm: "auto" }}>

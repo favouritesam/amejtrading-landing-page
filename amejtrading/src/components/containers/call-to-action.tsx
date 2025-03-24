@@ -84,7 +84,7 @@ export default function CallToAction() {
                             transition={{duration: 1, delay: 1.2}}
                         >
                             <VStack spacing={3} mt={4} align="center">
-                                <Text>✔️ 14 Days of Intensive Training</Text>
+                                <Text>✔️ 2 weeks of Intensive Training</Text>
                                 <Text>✔️ Personalized Mentorship from Experts</Text>
                                 <Text>✔️ Access to Premium Trading Signals</Text>
                                 <Text>✔️ Certificate of Completion</Text>
@@ -102,7 +102,7 @@ export default function CallToAction() {
                                 as="a"
                                 href="https://linktr.ee/Litefinanceclass?utm_source=linktree_profile_share&ltsid=89c16aec-bacc-4adb-81e6-4f1e36601f19"
                                 mt={5}
-                                bg="red.500"
+                                bg="#a90100"
                                 color="white"
                                 fontSize="14px"
                                 fontWeight={400}
